@@ -1,0 +1,7 @@
+#pane{
+    -fx-background-image: url("C:\Users\Ramonica\Desktop\3_1\versiunea_buna\utcn_dsrl-ds.handson.assignment3-11b15afa0b07\dvd.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}

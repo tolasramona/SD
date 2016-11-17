@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="ro.tuc.dsrl.ds.handson.assig.three.producer.model.DVD" table="dvd">
+		<meta attribute="class-description">
+			This class contains the dvd detail.
+		</meta>
+		<id name="id" type="int" column="id">
+			<generator class="native" />
+		</id>
+		<property name="title" column="title" type="string" />
+		<property name="year" column="year" type="int" />
+		<property name="price" column="price" type="double" />
+	</class>
+</hibernate-mapping>
