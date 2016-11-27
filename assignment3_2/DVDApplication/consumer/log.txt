@@ -1,0 +1,4 @@
+DVD-app logger
+DVD added: DVD [title=dvd1, year=1, price=1.0]
+DVD added: DVD [title=dvd1, year=1, price=1.0]
+DVD added: DVD [title=dvd4, year=1, price=1.0]
