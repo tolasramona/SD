@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="model.Package" table="package">
+		<meta attribute="class-description">
+			This class contains the package detail.
+		</meta>
+		<id name="id" type="int" column="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="sender" lazy="false" class="model.Client" column="senderId"
+			unique="true" not-null="true" cascade="all" />
+		<many-to-one name="receiver" lazy="false" class="model.Client" column="receiverId"
+			unique="true" not-null="true" cascade="all" />
+		<property name="name" column="name" type="string" />
+		<property name="description" column="description" type="string" />
+		<property name="senderCity" column="senderCity" type="string" />
+		<property name="receiverCity" column="destinationCity" type="string" />
+		<property name="tracked" column="tracked" type="boolean" />
+		<property name="routeId" column="routeId" type="int" />
+		<set name="routes" table="routes" lazy="false" fetch="select">
+			<key>
+				<column name="routeId" not-null="true"></column>
+			</key>
+			<one-to-many class="model.RouteEntry" />
+		</set>
+	</class>
+</hibernate-mapping>

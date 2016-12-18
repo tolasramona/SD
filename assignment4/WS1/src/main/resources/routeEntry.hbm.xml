@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping >
+
+	<class name="model.RouteEntry" table="routes">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="city" type="string">
+			<column name="city"></column>
+		</property>
+		<property name="time" type="long">
+			<column name="time"></column>
+		</property>
+		
+		
+		<many-to-one name="packageOfRote" class="model.Package">
+			<column name="routeId" not-null="true"></column>
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
